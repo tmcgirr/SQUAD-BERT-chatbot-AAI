@@ -8,9 +8,9 @@ This chatbot was fine tuned using the BERT model and the SQuAD dataset. The data
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://squad-bert-chatbot-aai.streamlit.app/)
 
-## GitHub Codespaces
+## HuggingFace Model
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
+[View Model on HuggingFace](https://huggingface.co/tmcgirr/BERT-squad-chatbot-AAI)
 
 ## Section Heading
 
