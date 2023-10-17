@@ -1,4 +1,6 @@
 # git ignore
 .env
 
+# ignore /.streamlit/secrets.toml file across all branches
+!.streamlit/secrets.toml
 

@@ -1,7 +1,6 @@
 import os
 import streamlit as st
 import requests
-# from dotenv import load_dotenv
 
 # LangChain
 from langchain.embeddings import OpenAIEmbeddings
@@ -13,15 +12,9 @@ import openai
 # Pinecone
 import pinecone
 
-# load_dotenv()
-
-st.write("PINECONE_API_KEY:", st.secrets["PINECONE_API_KEY"])
-PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
-st.write("PINECONE_INDEX_NAME:", st.secrets["PINECONE_INDEX_NAME"])
-PINECONE_INDEX_NAME = os.environ.get("PINECONE_INDEX_NAME")
-
-st.write("OPENAI_API_KEY:", st.secrets["OPENAI_API_KEY"])
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
+PINECONE_INDEX_NAME = st.secrets["PINECONE_INDEX_NAME"]
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 openai.api_key = OPENAI_API_KEY
 
