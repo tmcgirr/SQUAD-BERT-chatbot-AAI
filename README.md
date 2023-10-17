@@ -6,7 +6,7 @@ This chatbot was fine tuned using the BERT model and the SQuAD dataset. The data
 
 ## Quickstart
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/](https://squad-bert-chatbot-aai.streamlit.app/))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://squad-bert-chatbot-aai.streamlit.app/)
 
 ## GitHub Codespaces
 
