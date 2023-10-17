@@ -1,0 +1,31 @@
+2023-10-15 16:12:44,373 INFO    MainThread:44188 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_setup.py:_flush():76] Configure stats pid to 44188
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_setup.py:_flush():76] Loading settings from /Users/trevormcgirr/.config/wandb/settings
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_setup.py:_flush():76] Loading settings from /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/settings
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_init.py:_log_setup():528] Logging user logs to /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/logs/debug.log
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_init.py:_log_setup():529] Logging internal logs to /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/logs/debug-internal.log
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_init.py:_jupyter_setup():474] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x335830390>
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_init.py:init():568] calling init triggers
+2023-10-15 16:12:44,374 INFO    MainThread:44188 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'adafactor_beta1': None, 'adafactor_clip_threshold': 1.0, 'adafactor_decay_rate': -0.8, 'adafactor_eps': (1e-30, 0.001), 'adafactor_relative_step': True, 'adafactor_scale_parameter': True, 'adafactor_warmup_init': True, 'adam_betas': (0.9, 0.999), 'adam_epsilon': 1e-08, 'best_model_dir': 'outputs/bert/best_model', 'cache_dir': 'cache_dir/', 'config': {}, 'cosine_schedule_num_cycles': 0.5, 'custom_layer_parameters': [], 'custom_parameter_groups': [], 'dataloader_num_workers': 0, 'do_lower_case': False, 'dynamic_quantize': False, 'early_stopping_consider_epochs': False, 'early_stopping_delta': 0, 'early_stopping_metric': 'correct', 'early_stopping_metric_minimize': False, 'early_stopping_patience': 3, 'encoding': None, 'eval_batch_size': 64, 'evaluate_during_training': True, 'evaluate_during_training_silent': True, 'evaluate_during_training_steps': 10000, 'evaluate_during_training_verbose': False, 'evaluate_each_epoch': True, 'fp16': False, 'gradient_accumulation_steps': 1, 'learning_rate': 4e-05, 'local_rank': -1, 'logging_steps': 50, 'loss_type': None, 'loss_args': {}, 'manual_seed': None, 'max_grad_norm': 1.0, 'max_seq_length': 128, 'model_name': 'bert-base-cased', 'model_type': 'bert', 'multiprocessing_chunksize': -1, 'n_gpu': 1, 'no_cache': False, 'no_save': False, 'not_saved_args': [], 'num_train_epochs': 5, 'optimizer': 'AdamW', 'output_dir': 'outputs/bert', 'overwrite_output_dir': True, 'polynomial_decay_schedule_lr_end': 1e-07, 'polynomial_decay_schedule_power': 1.0, 'process_count': 10, 'quantized_model': False, 'reprocess_input_data': True, 'save_best_model': True, 'save_eval_checkpoints': False, 'save_model_every_epoch': False, 'save_optimizer_and_scheduler': True, 'save_steps': 2000, 'scheduler': 'linear_schedule_with_warmup', 'silent': False, 'skip_special_tokens': True, 'tensorboard_dir': None, 'thread_count': None, 'tokenizer_name': None, 'tokenizer_type': None, 'train_batch_size': 128, 'train_custom_parameters_only': False, 'use_cached_eval_features': True, 'use_early_stopping': False, 'use_hf_datasets': False, 'use_multiprocessing': True, 'use_multiprocessing_for_evaluation': True, 'wandb_kwargs': {'name': 'bert-qa'}, 'wandb_project': 'Question Answering using BERT', 'warmup_ratio': 0.06, 'warmup_steps': 208, 'weight_decay': 0.0, 'model_class': 'QuestionAnsweringModel', 'doc_stride': 384, 'lazy_loading': False, 'max_answer_length': 100, 'max_query_length': 64, 'n_best_size': 3, 'null_score_diff_threshold': 0.0, 'special_tokens_list': []}
+2023-10-15 16:12:44,375 INFO    MainThread:44188 [wandb_init.py:init():618] starting backend
+2023-10-15 16:12:44,375 INFO    MainThread:44188 [wandb_init.py:init():622] setting up manager
+2023-10-15 16:12:44,376 INFO    MainThread:44188 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2023-10-15 16:12:44,378 INFO    MainThread:44188 [wandb_init.py:init():628] backend started and connected
+2023-10-15 16:12:44,388 INFO    MainThread:44188 [wandb_run.py:_label_probe_notebook():1276] probe notebook
+2023-10-15 16:12:44,388 INFO    MainThread:44188 [wandb_run.py:_label_probe_notebook():1286] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-10-15 16:12:44,388 INFO    MainThread:44188 [wandb_init.py:init():720] updated telemetry
+2023-10-15 16:12:44,396 INFO    MainThread:44188 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-10-15 16:12:44,896 INFO    MainThread:44188 [wandb_run.py:_on_init():2220] communicating current version
+2023-10-15 16:12:45,156 INFO    MainThread:44188 [wandb_run.py:_on_init():2229] got version response 
+2023-10-15 16:12:45,157 INFO    MainThread:44188 [wandb_init.py:init():804] starting run threads in backend
+2023-10-15 16:12:49,929 INFO    MainThread:44188 [wandb_run.py:_console_start():2199] atexit reg
+2023-10-15 16:12:49,929 INFO    MainThread:44188 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2023-10-15 16:12:49,929 INFO    MainThread:44188 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2023-10-15 16:12:49,929 INFO    MainThread:44188 [wandb_run.py:_redirect():2144] Redirects installed.
+2023-10-15 16:12:49,930 INFO    MainThread:44188 [wandb_init.py:init():845] run started, returning control to user process
+2023-10-15 16:12:49,930 INFO    MainThread:44188 [wandb_watch.py:watch():51] Watching

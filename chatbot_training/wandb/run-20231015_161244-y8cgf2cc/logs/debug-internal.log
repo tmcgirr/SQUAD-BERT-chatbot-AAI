@@ -1,0 +1,72 @@
+2023-10-15 16:12:44,377 INFO    StreamThr :44762 [internal.py:wandb_internal():86] W&B internal server running at pid: 44762, started at: 2023-10-15 16:12:44.377066
+2023-10-15 16:12:44,378 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status
+2023-10-15 16:12:44,388 INFO    WriterThread:44762 [datastore.py:open_for_write():85] open: /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/run-y8cgf2cc.wandb
+2023-10-15 16:12:44,389 DEBUG   SenderThread:44762 [sender.py:send():380] send: header
+2023-10-15 16:12:44,397 DEBUG   SenderThread:44762 [sender.py:send():380] send: run
+2023-10-15 16:12:44,891 INFO    SenderThread:44762 [dir_watcher.py:__init__():211] watching files in: /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/files
+2023-10-15 16:12:44,891 INFO    SenderThread:44762 [sender.py:_start_run_threads():1122] run started: y8cgf2cc with start time 1697411564.378315
+2023-10-15 16:12:44,897 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: check_version
+2023-10-15 16:12:44,897 DEBUG   SenderThread:44762 [sender.py:send_request():407] send_request: check_version
+2023-10-15 16:12:45,159 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: run_start
+2023-10-15 16:12:45,166 DEBUG   HandlerThread:44762 [system_info.py:__init__():32] System info init
+2023-10-15 16:12:45,166 DEBUG   HandlerThread:44762 [system_info.py:__init__():47] System info init done
+2023-10-15 16:12:45,166 INFO    HandlerThread:44762 [system_monitor.py:start():194] Starting system monitor
+2023-10-15 16:12:45,166 INFO    SystemMonitor:44762 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-10-15 16:12:45,166 INFO    HandlerThread:44762 [system_monitor.py:probe():214] Collecting system info
+2023-10-15 16:12:45,167 INFO    SystemMonitor:44762 [interfaces.py:start():190] Started cpu monitoring
+2023-10-15 16:12:45,167 DEBUG   HandlerThread:44762 [system_info.py:probe():196] Probing system
+2023-10-15 16:12:45,167 INFO    SystemMonitor:44762 [interfaces.py:start():190] Started disk monitoring
+2023-10-15 16:12:45,168 INFO    SystemMonitor:44762 [interfaces.py:start():190] Started gpuapple monitoring
+2023-10-15 16:12:45,169 INFO    SystemMonitor:44762 [interfaces.py:start():190] Started memory monitoring
+2023-10-15 16:12:45,170 INFO    SystemMonitor:44762 [interfaces.py:start():190] Started network monitoring
+2023-10-15 16:12:45,172 DEBUG   HandlerThread:44762 [gitlib.py:_init_repo():53] git repository is invalid
+2023-10-15 16:12:45,172 DEBUG   HandlerThread:44762 [system_info.py:probe():244] Probing system done
+2023-10-15 16:12:45,172 DEBUG   HandlerThread:44762 [system_monitor.py:probe():223] {'os': 'macOS-13.5-arm64-arm-64bit', 'python': '3.11.0', 'heartbeatAt': '2023-10-15T23:12:45.167419', 'startedAt': '2023-10-15T23:12:44.371386', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'host': 'MacBook-Pro-2-635.lan', 'username': 'trevormcgirr', 'executable': '/Users/trevormcgirr/anaconda3/bin/python', 'cpu_count': 12, 'cpu_count_logical': 12, 'disk': {'/': {'total': 1858.1917190551758, 'used': 222.63047790527344}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 96.0}}
+2023-10-15 16:12:45,172 INFO    HandlerThread:44762 [system_monitor.py:probe():224] Finished collecting system info
+2023-10-15 16:12:45,173 INFO    HandlerThread:44762 [system_monitor.py:probe():227] Publishing system info
+2023-10-15 16:12:45,173 DEBUG   HandlerThread:44762 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-10-15 16:12:45,173 DEBUG   HandlerThread:44762 [system_info.py:_save_pip():68] Saving pip packages done
+2023-10-15 16:12:45,173 DEBUG   HandlerThread:44762 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-10-15 16:12:45,897 INFO    Thread-12 :44762 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/files/conda-environment.yaml
+2023-10-15 16:12:45,897 INFO    Thread-12 :44762 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/files/requirements.txt
+2023-10-15 16:12:49,917 INFO    Thread-12 :44762 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/files/conda-environment.yaml
+2023-10-15 16:12:49,917 DEBUG   HandlerThread:44762 [system_info.py:_save_conda():87] Saving conda packages done
+2023-10-15 16:12:49,917 INFO    HandlerThread:44762 [system_monitor.py:probe():229] Finished publishing system info
+2023-10-15 16:12:49,922 DEBUG   SenderThread:44762 [sender.py:send():380] send: files
+2023-10-15 16:12:49,922 INFO    SenderThread:44762 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-10-15 16:12:49,923 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:12:49,929 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-15 16:12:49,929 DEBUG   SenderThread:44762 [sender.py:send_request():407] send_request: stop_status
+2023-10-15 16:12:49,930 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-15 16:12:50,260 DEBUG   SenderThread:44762 [sender.py:send():380] send: telemetry
+2023-10-15 16:12:50,260 DEBUG   SenderThread:44762 [sender.py:send():380] send: telemetry
+2023-10-15 16:12:50,261 DEBUG   SenderThread:44762 [sender.py:send():380] send: telemetry
+2023-10-15 16:12:50,461 INFO    wandb-upload_0:44762 [upload_job.py:push():131] Uploaded file /var/folders/8t/_x4qcscx7txf2l7h7tx1jwgr0000gn/T/tmpv3_ridoowandb/30attxc1-wandb-metadata.json
+2023-10-15 16:12:50,922 INFO    Thread-12 :44762 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/files/wandb-metadata.json
+2023-10-15 16:12:55,277 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:00,296 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:04,934 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-15 16:13:04,935 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-15 16:13:04,935 DEBUG   SenderThread:44762 [sender.py:send_request():407] send_request: stop_status
+2023-10-15 16:13:06,090 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:11,115 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:16,135 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:17,031 INFO    Thread-12 :44762 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/trevormcgirr/Desktop/USD-ML/AAI-520 NLP/project/wandb/run-20231015_161244-y8cgf2cc/files/config.yaml
+2023-10-15 16:13:19,939 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-15 16:13:19,940 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-15 16:13:19,940 DEBUG   SenderThread:44762 [sender.py:send_request():407] send_request: stop_status
+2023-10-15 16:13:22,064 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:27,085 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:32,102 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:34,942 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-15 16:13:34,943 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-15 16:13:34,946 DEBUG   SenderThread:44762 [sender.py:send_request():407] send_request: stop_status
+2023-10-15 16:13:38,062 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:43,083 DEBUG   HandlerThread:44762 [handler.py:handle_request():146] handle_request: status_report
+2023-10-15 16:13:43,314 INFO    memory    :44762 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2023-10-15 16:13:43,314 DEBUG   SystemMonitor:44762 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-10-15 16:13:43,315 DEBUG   SystemMonitor:44762 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-10-15 16:13:43,315 DEBUG   SystemMonitor:44762 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-10-15 16:13:43,315 DEBUG   SenderThread:44762 [sender.py:send():380] send: telemetry
+2023-10-15 16:13:43,316 DEBUG   SenderThread:44762 [sender.py:send():380] send: stats
+2023-10-15 16:13:44,397 INFO    MainThread:44762 [internal.py:handle_exit():76] Internal process exited
