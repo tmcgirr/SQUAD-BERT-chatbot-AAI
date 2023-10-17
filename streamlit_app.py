@@ -105,12 +105,21 @@ def generate_response(prompt_input):
     print(output)
     print("End of output\n\n")
 
-    # Check if 'answer' is in the output
-    if 'answer' in output:
-        return output['answer']
+    if 'answer' in output and 'score' in output:
+        score = output['score']
+        answer = output['answer']
+        
+        # Add a prelude based on the score
+        if score < 0.5:
+            answer = "I'm unsure, but my guess might be " + answer + ". " "\nPlease restate the question and add more context."
+        elif score < 0.75:
+            answer = "I think it's " + answer
+        else:
+            answer = answer[0].upper() + answer[1:]
+        return answer
     else:
         # Handle error: 'answer' not in output
-        return "I'm sorry, I couldn't find an answer to your question."
+        return "I'm sorry, I couldn't find an answer to your question. Please restate the question and add more context."
 
 # User-provided prompt
 if prompt := st.chat_input():
