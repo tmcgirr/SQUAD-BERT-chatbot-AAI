@@ -51,7 +51,7 @@ vectorstore = Pinecone(index, embeddings.embed_query, "text")
 
 # Initialize conversation history if it doesn't exist
 if "conversation" not in st.session_state:
-    st.session_state.conversation = [{"role": "assistant", "content": "How may I help you?"}]
+    st.session_state.conversation = [{"role": "assistant", "content": "Please enter a question from the SQuAD dataset"}]
 
 # Display conversation history
 for message in st.session_state.conversation:
