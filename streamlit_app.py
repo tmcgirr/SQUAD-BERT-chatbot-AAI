@@ -1,6 +1,8 @@
 import os
 import streamlit as st
 import requests
+import time
+
 
 # LangChain
 from langchain.embeddings import OpenAIEmbeddings
@@ -33,9 +35,21 @@ hf_token = os.getenv('HF_TOKEN')
 API_URL = "https://api-inference.huggingface.co/models/tmcgirr/BERT-squad-chatbot-AAI"
 headers = {"Authorization":  f"Bearer {hf_token}"}
 
-def query(payload):
-    response = requests.post(API_URL, headers=headers, json=payload)
-    return response.json()
+def query(payload, retries=5, delay=5):
+    for i in range(retries):
+        response = requests.post(API_URL, headers=headers, json=payload)
+        response_json = response.json()
+        
+        # If the model is still loading, wait and retry
+        if 'error' in response_json and 'loading' in response_json['error']:
+            print(f"Model is still loading. Waiting for {delay} seconds before retrying...")
+            time.sleep(delay)
+            continue
+        
+        return response_json
+
+    # If the model is still loading after all retries, return the last response
+    return response_json
 
 # Check if Hugging Face credentials are provided
 if not hf_token:
@@ -51,7 +65,11 @@ vectorstore = Pinecone(index, embeddings.embed_query, "text")
 
 # Initialize conversation history if it doesn't exist
 if "conversation" not in st.session_state:
-    st.session_state.conversation = [{"role": "assistant", "content": "Please enter a question from the SQuAD dataset"}]
+    st.session_state.conversation = [{"role": "assistant", "content": "Hello! What is your question?"}]
+
+st.sidebar.header("Your Context:")
+st.sidebar.markdown("Provide your context here for a more direct QA experience, otherwise leave blank for a more general QA")
+user_context = st.sidebar.text_area("", value="", height=500)
 
 # Display conversation history
 for message in st.session_state.conversation:
@@ -64,41 +82,35 @@ def generate_search_report(prompt: str, k: int):
     docs = index.query([xq], top_k=k, include_metadata=True)
     return docs
 
-# Function for generating LLM response
-def generate_response(prompt_input):
-    # Generate search based on question (and the last 500 characters of the conversation history)
-    conversation_history = [message['content'] for message in st.session_state.conversation]
-    print("\n\nStart of conversation history")
-    print(conversation_history)
-    print("End of conversation history\n\n")
-    
-    # Generate search based on question and the last 500 characters of the conversation history
-    search_context = " ".join(conversation_history[-500:]) + " " + prompt_input
-    print("\n\nStart of search context")
-    print(search_context)
-    print("End of search context\n\n")
-    
-    # generate search based on question
-    docs = generate_search_report(search_context, 5)
-    print("\n\nStart of docs")
-    print(docs)
-    print("End of docs\n\n")
+def generate_response(prompt_input, user_context=None):
+    # If user-provided context is not empty, use it instead
+    if user_context:
+        context = user_context
+        print("\n\nStart of user_context")
+        print(context)
+        print("End of user_context\n\n")
+    else:
+        # Generate search based on question (and the last 500 characters of the conversation history)
+        conversation_history = [message['content'] for message in st.session_state.conversation]
+        
+        # Generate search based on question and the last 500 characters of the conversation history
+        search_context = " ".join(conversation_history[-500:]) + " " + prompt_input
+        
+        # generate search based on question
+        docs = generate_search_report(search_context, 5)
 
-    # Extract the context from the output
-    context = " ".join([match['metadata']['text'] for match in docs['matches']])
-    print("\n\nStart of context")
-    print(context)
-    print("End of context\n\n")
-
+        # Extract the context from the output
+        context = " ".join([match['metadata']['text'] for match in docs['matches']])
+        print("\n\nStart of search context")
+        print(context)
+        print("End of search context\n\n")
+    
     payload = {
         "inputs": {
             "question": prompt_input,
             "context": context
         },
     }
-    print("Question: ", prompt_input)
-    print("Context: ", context)
-
     
     output = query(payload)
     print("\n\nStart of output")
@@ -131,7 +143,8 @@ if prompt := st.chat_input():
 if st.session_state.conversation[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            response = generate_response(prompt) 
+            response = generate_response(prompt, user_context)  # Pass user_context here
             st.write(response) 
     message = {"role": "assistant", "content": response}
     st.session_state.conversation.append(message)
+
