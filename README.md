@@ -12,14 +12,3 @@ This chatbot was fine tuned using the BERT model and the SQuAD dataset. The data
 
 [View Model on HuggingFace](https://huggingface.co/tmcgirr/BERT-squad-chatbot-AAI)
 
-## Section Heading
-
-This is filler text, please replace this with a explanatory text about the section
-
-## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-
-- Resource 1
-- Resource 2
-- Resource 3
